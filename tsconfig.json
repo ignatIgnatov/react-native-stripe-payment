@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "app/result.jsx", "app/index.jsx", "utils/stripe-server.js", "utils/stripe-server.js", "utils/config.js", "app/+native-intent.js", "components/checkout-button.jsx", "components/checkout-form.native.jsx", "components/checkout-form.jsx", "components/stripe-provider.jsx", "components/stripe-provider.web.jsx", "app/api/payment-sheet+api.ts", "app/api/stripe-results+api.js", "app/api/hosted-checkout-session+api.js", "app/_layout.jsx"  ]
 }

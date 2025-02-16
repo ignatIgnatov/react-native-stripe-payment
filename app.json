@@ -5,25 +5,33 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "fullstach-stripe-app",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gatio.fullstachstripeapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.gatio.fullstachstripeapp",
+      "permissions": []
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "origin": "https://fullstach-stripe-app.con"
+        }
+      ],
       [
         "expo-splash-screen",
         {
@@ -32,10 +40,25 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "merchant.com.gatio.fullstachstripeapp",
+          "publishableKey": "pk_test_51PWXqNCz1Ym9ePz8NZQykTGS1gngV6ntRXQjku20ziMQ0xxIpuXbxRm47AW1tTx0P0UWE6DjcBzbmUH6XVBdIr3600XvMeXPb3"
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "3288e69f-b801-4ddb-9b7f-5ba30d3dc28c"
+      }
     }
   }
 }
