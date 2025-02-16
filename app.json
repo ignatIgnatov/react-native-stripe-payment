@@ -53,11 +53,9 @@
       "typedRoutes": true
     },
     "extra": {
+      "backendUrl": "http://192.168.0.50:8080",
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "3288e69f-b801-4ddb-9b7f-5ba30d3dc28c"
       }
     }
   }

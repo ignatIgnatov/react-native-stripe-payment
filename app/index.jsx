@@ -1,7 +1,7 @@
 import CheckoutForm from "@/components/checkout-form";
 import Slider from "@react-native-community/slider";
 import { useState } from "react";
-import { Image, ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text } from "react-native";
 
 export default function DonatePage() {
   const [donationAmount, setDonationAmount] = useState(0);
@@ -18,12 +18,12 @@ export default function DonatePage() {
       />
 
       <Text style={{ fontWeight: "600" }}>
-        Price: {Math.floor(donationAmount)}
+        Price: {Math.floor(donationAmount ? donationAmount : 1)}
       </Text>
 
       <Slider
         style={{ width: "100%", height: 40 }}
-        minimumValue={10}
+        minimumValue={1}
         maximumValue={150}
         value={donationAmount}
         onValueChange={setDonationAmount}

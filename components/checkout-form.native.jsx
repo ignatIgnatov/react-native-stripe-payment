@@ -3,14 +3,17 @@ import * as Linking from "expo-linking";
 import { useEffect, useState } from "react";
 import { useStripe } from "@stripe/stripe-react-native";
 import CheckoutButton from "./checkout-button";
+import Constants from "expo-constants";
+
+const API_URL = Constants.expoConfig.extra.backendUrl;
 
 async function fetchPaymentSheetParams(amount) {
-  return fetch(`/api/payment-sheet`, {
+  return fetch(`${API_URL}/api/payment`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ amount }),
+    body: JSON.stringify(amount),
   }).then((res) => res.json());
 }
 
